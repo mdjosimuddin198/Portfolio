@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 const TypeingEffect = () => {
   return (
     <>
-      <h2 className="text-5xl ">
+      <h2 className="md:text-5xl  text-3xl ">
         {/* if i  want an animation for it  */}
         {/* <motion.span
           animate={{

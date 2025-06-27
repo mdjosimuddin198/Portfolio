@@ -12,6 +12,7 @@ import { Link } from "react-router";
 import WhatIDo from "./WhatIDo/WhatIDo";
 import ProjectDemo from "./projectDemo/ProjectDemo";
 import { Element } from "react-scroll";
+import AboutMeSection from "./aboutMe/AboutMeSection";
 
 const Hero = () => {
   return (
@@ -83,6 +84,7 @@ const Hero = () => {
           </div>
         </div>
       </Element>
+      <AboutMeSection></AboutMeSection>
       <ProjectDemo></ProjectDemo>
       <WhatIDo></WhatIDo>
     </>
