@@ -11,11 +11,12 @@ import { IoLogoJavascript } from "react-icons/io";
 import { Link } from "react-router";
 import WhatIDo from "./WhatIDo/WhatIDo";
 import ProjectDemo from "./projectDemo/ProjectDemo";
+import { Element } from "react-scroll";
 
 const Hero = () => {
   return (
     <>
-      <div className="hero py-4">
+      <Element name="home" className="hero py-4">
         <div className="hero-content flex-col justify-evenly lg:flex-row-reverse">
           <div className="md:w-1/2 flex items-center md:justify-end justify-center w-full">
             <img
@@ -75,7 +76,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Element>
       <ProjectDemo></ProjectDemo>
       <WhatIDo></WhatIDo>
     </>

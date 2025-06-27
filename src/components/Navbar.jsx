@@ -1,21 +1,54 @@
 import React from "react";
 import { MdMenu } from "react-icons/md";
-import { NavLink } from "react-router";
+// import { Link } from "react-router";
+import { Link, Element } from "react-scroll";
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">HOME</NavLink>
+        <Link
+          to="home"
+          spy={true}
+          activeClass="text-[#ff014f]"
+          smooth={true}
+          duration={500}
+        >
+          HOME
+        </Link>
       </li>
       <li>
-        <NavLink to="/projects">PROJECTS</NavLink>
+        <Link
+          to="projects"
+          spy={true}
+          activeClass="text-[#ff014f]"
+          smooth={true}
+          duration={500}
+        >
+          PROJECTS
+        </Link>
       </li>
       <li>
-        <NavLink to="/resume">RESUME</NavLink>
+        <Link
+          to="resume"
+          spy={true}
+          activeClass="text-[#ff014f]"
+          smooth={true}
+          duration={500}
+        >
+          RESUME
+        </Link>
       </li>
       <li>
-        <NavLink to="/contacts">CONTACTS</NavLink>
+        <Link
+          to="contacts"
+          spy={true}
+          activeClass="text-[#ff014f]"
+          smooth={true}
+          duration={500}
+        >
+          CONTACTS
+        </Link>
       </li>
     </>
   );
@@ -44,7 +77,13 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn text-[#ff014f] ">Resume</a>
+          <a
+            href="https://www.linkedin.com/in/mdjosimuddin198/"
+            target="_blank"
+            className="btn text-[#ff014f] "
+          >
+            Hire Me
+          </a>
         </div>
       </div>
     </>

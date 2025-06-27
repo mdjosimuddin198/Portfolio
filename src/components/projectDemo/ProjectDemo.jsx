@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import { FaArrowRight, FaGithub } from "react-icons/fa";
 import axios from "axios";
+import { Element } from "react-scroll";
 
 const ProjectDemo = () => {
   const [projects, setProjects] = useState([]);
@@ -31,7 +32,7 @@ const ProjectDemo = () => {
   }
 
   return (
-    <section className=" my-12">
+    <Element name="projects" className=" my-12">
       <p className="text-xl text-[#ff014f]">
         Visit my Projects and keep your feedback
       </p>
@@ -80,7 +81,7 @@ const ProjectDemo = () => {
           </div>
         ))}
       </div>
-    </section>
+    </Element>
   );
 };
 
