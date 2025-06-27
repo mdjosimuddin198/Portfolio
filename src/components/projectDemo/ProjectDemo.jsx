@@ -34,10 +34,10 @@ const ProjectDemo = () => {
 
   return (
     <Element name="projects" className=" my-12">
-      <p className="text-xl text-[#ff014f]">
-        Visit my Projects and Give your feedback
-      </p>
-      <h2 className="text-5xl font-bold  mb-12 text-white">Projects</h2>
+      <p className="text-5xl text-[#ff014f]">My Projects</p>
+      <h2 className="text-xl font-bold  mb-12 text-white">
+        Visit my Projects and Give your feedback{" "}
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div

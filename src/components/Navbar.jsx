@@ -60,17 +60,7 @@ const Navbar = () => {
           PROJECTS
         </Link>
       </li>
-      <li>
-        <Link
-          to="resume"
-          spy={true}
-          activeClass="text-[#ff014f]"
-          smooth={true}
-          duration={500}
-        >
-          RESUME
-        </Link>
-      </li>
+
       <li>
         <Link
           to="contacts"

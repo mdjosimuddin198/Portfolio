@@ -13,6 +13,8 @@ import WhatIDo from "./WhatIDo/WhatIDo";
 import ProjectDemo from "./projectDemo/ProjectDemo";
 import { Element } from "react-scroll";
 import AboutMeSection from "./aboutMe/AboutMeSection";
+import Skills from "./skilll/Skills";
+import Contact from "./contact/Contact";
 
 const Hero = () => {
   return (
@@ -85,8 +87,10 @@ const Hero = () => {
         </div>
       </Element>
       <AboutMeSection></AboutMeSection>
+      <Skills></Skills>
       <ProjectDemo></ProjectDemo>
       <WhatIDo></WhatIDo>
+      <Contact></Contact>
     </>
   );
 };

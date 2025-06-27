@@ -52,8 +52,10 @@ const whatIDoData = [
 const WhatIDo = () => {
   return (
     <section className=" my-12">
-      <p className="text-xl text-[#ff014f]">Features</p>
-      <h2 className="text-5xl font-bold  mb-12 text-white">What I Do</h2>
+      <p className="text-5xl text-[#ff014f]">What I Do</p>
+      <h2 className="text-xl font-bold  mb-12 text-white">
+        Frontend Developer
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
         {whatIDoData.map((item, index) => (
           <div
