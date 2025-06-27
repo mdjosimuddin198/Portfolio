@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 // import projects from "../../demoProject.json";
 import { Link, useLoaderData } from "react-router";
-import { FaArrowRight, FaGithub } from "react-icons/fa";
+import { FaGlobe, FaCode, FaServer, FaArrowRight } from "react-icons/fa";
 import axios from "axios";
 import { Element } from "react-scroll";
+import { CiViewList } from "react-icons/ci";
 
 const ProjectDemo = () => {
   const [projects, setProjects] = useState([]);
@@ -65,17 +66,37 @@ const ProjectDemo = () => {
                 rel="noopener noreferrer"
                 className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full"
               >
-                <FaArrowRight></FaArrowRight>
+                <FaGlobe></FaGlobe>
               </a>
 
               {/* Live Button */}
               <a
-                href={project.repoLink}
+                href={project.clientLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full"
               >
-                <FaGithub />
+                <FaCode></FaCode>
+              </a>
+              {/* Live Button server */}
+              {project?.serverLink ? (
+                <>
+                  <a
+                    href={project?.serverLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full"
+                  >
+                    <FaServer></FaServer>
+                  </a>
+                </>
+              ) : undefined}
+              <a
+                href={`/details/${project._id}`}
+                rel="noopener noreferrer"
+                className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full"
+              >
+                <FaArrowRight></FaArrowRight>
               </a>
             </div>
           </div>

@@ -41,15 +41,21 @@ const Hero = () => {
                 <h2 className="text-xl font-thin mb-2">Find With Me</h2>
                 <div className="flex flex-col md:flex-row items-center gap-4 justify-between">
                   <Link
+                    target="_blank"
                     to="https://www.facebook.com/mdjosimuddin198"
                     className="btn"
                   >
                     <FaFacebookF size={25} />
                   </Link>
-                  <Link to="https://github.com/mdjosimuddin198" className="btn">
+                  <Link
+                    target="_blank"
+                    to="https://github.com/mdjosimuddin198"
+                    className="btn"
+                  >
                     <FaGithub size={25} />
                   </Link>
                   <Link
+                    target="_blank"
                     to="https://www.linkedin.com/in/mdjosimuddin198/"
                     className="btn "
                   >

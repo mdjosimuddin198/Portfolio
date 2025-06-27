@@ -2,6 +2,7 @@ import React from "react";
 import { MdMenu } from "react-icons/md";
 // import { Link } from "react-router";
 import { Link, Element } from "react-scroll";
+import { DemoBorder } from "./lib/AnimatedBorder.jsx/DemoBorder";
 
 const Navbar = () => {
   const links = (
@@ -16,6 +17,37 @@ const Navbar = () => {
         >
           HOME
         </Link>
+      </li>
+      <li>
+        <Link
+          to="about"
+          spy={true}
+          activeClass="text-[#ff014f]"
+          smooth={true}
+          duration={500}
+        >
+          ABOUT
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="skill"
+          spy={true}
+          activeClass="text-[#ff014f]"
+          smooth={true}
+          duration={500}
+        >
+          SKILL
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="skill"
+          spy={true}
+          activeClass="text-[#ff014f]"
+          smooth={true}
+          duration={500}
+        ></Link>
       </li>
       <li>
         <Link
@@ -68,22 +100,27 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="flex items-center gap-3">
-            <img className="w-12" src="/favIconPortfollio.png" alt="" />
-            <p className="text-md">JOSIM</p>
+          <div className="flex items-center ">
+            <img
+              className="w-18  object-cover"
+              src="https://i.ibb.co/ZpvXZY4y/image-removebg-preview-2.png"
+              alt=""
+            />
+            <p className="text-md hidden md:block">JOSIM UDDIN</p>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a
+          {/* <a
             href="https://www.linkedin.com/in/mdjosimuddin198/"
             target="_blank"
             className="btn text-[#ff014f] "
           >
             Hire Me
-          </a>
+          </a> */}
+          <DemoBorder></DemoBorder>
         </div>
       </div>
     </>
