@@ -10,7 +10,7 @@ export function DemoBorder() {
         className=" py-0 bg-slate-900  text-[#ff014f]  border-slate-800 hover:scale-125"
       >
         <a
-          href="https://docs.google.com/document/d/1TjPu4unx53HBmODwUeWskFzsyCUAk1iDBx7J7NBCoCQ/edit?usp=sharing"
+          href="https://drive.google.com/file/d/1pVfXS4VaOuIlqJJwJ6zJbqXbXGkEf0Pz/view"
           target="_blank"
         >
           GET RESUME
