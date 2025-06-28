@@ -21,10 +21,10 @@ const Hero = () => {
     <>
       <Element name="home" className="hero py-4">
         <div className="hero-content flex-col justify-evenly lg:flex-row-reverse">
-          <div className="md:w-1/2 flex items-center md:justify-end justify-center w-full">
+          <div className=" md:w-1/2 flex items-center md:justify-end justify-center w-full">
             <img
-              src="/heroImg.jpg"
-              className="md:w-[400px] rounded-lg shadow-2xl"
+              src="/Hero.png"
+              className="md:w-[400px] border-2 border-red-400 p-4   rounded-full shadow-2xl"
             />
           </div>
           <div className="md:w-1/2 w-full space-y-2 ">

@@ -6,7 +6,7 @@ import { Element } from "react-scroll";
 
 const Contact = () => {
   return (
-    <Element name="contacts " className=" rounded-2xl">
+    <Element name="contacts" className=" rounded-2xl">
       <p className="text-5xl p-4 text-[#ff014f]">Contact With Me</p>
       <section className=" text-white py-8 md:flex gap-8  items-center justify-center">
         {/* Left Section - Contact Info */}

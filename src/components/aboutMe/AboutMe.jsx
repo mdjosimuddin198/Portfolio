@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaRegCopy } from "react-icons/fa";
 
 const AboutMe = () => {
   const [copied, setCopied] = useState(false);
@@ -34,7 +35,7 @@ const AboutMe = () => {
         onClick={handleCopy}
         className="absolute top-2 right-2 bg-[#161b22] px-2 py-1 rounded text-xs text-gray-400 hover:text-white transition"
       >
-        {copied ? "✅ Copied!" : "📋 Copy"}
+        {copied ? "✅ Copied!" : <FaRegCopy />}
       </button>
 
       <pre className="overflow-x-auto whitespace-pre-wrap leading-relaxed">

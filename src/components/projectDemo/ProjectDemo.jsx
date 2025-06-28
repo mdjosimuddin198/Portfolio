@@ -5,10 +5,22 @@ import { FaGlobe, FaCode, FaServer, FaArrowRight } from "react-icons/fa";
 import axios from "axios";
 import { Element } from "react-scroll";
 import { CiViewList } from "react-icons/ci";
+import ModalDetails from "../modalDetails/ModalDetails";
 
 const ProjectDemo = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  // const [selectedProjectId, setSelectedProjectId] = useState(null);
+  const [project, setporoject] = useState({});
+
+  const handleDetails = async (id) => {
+    const responce = await axios.get(
+      `https://portfolio-of-josim-uddin.vercel.app/projects/${id}`
+    );
+    setporoject(responce.data);
+    document.getElementById("my_modal_3").showModal();
+  };
+
   useEffect(() => {
     axios
       .get("https://portfolio-of-josim-uddin.vercel.app/projects")
@@ -91,17 +103,23 @@ const ProjectDemo = () => {
                   </a>
                 </>
               ) : undefined}
-              <a
-                href={`/details/${project._id}`}
+              <button
+                onClick={() => handleDetails(project._id)}
+                // onClick={() => {
+                //   setSelectedProjectId(project._id);
+                //   document.getElementById("my_modal_3").showModal();
+                // }}
+                // href={`/details/${project._id}`}
                 rel="noopener noreferrer"
                 className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full"
               >
                 <FaArrowRight></FaArrowRight>
-              </a>
+              </button>
             </div>
           </div>
         ))}
       </div>
+      <ModalDetails project={project}></ModalDetails>
     </Element>
   );
 };
