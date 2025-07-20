@@ -1,14 +1,37 @@
-import React from "react";
-import { MdMenu } from "react-icons/md";
+import React, { useEffect, useState } from "react";
+import { MdClose, MdMenu } from "react-icons/md";
 // import { Link } from "react-router";
 import { Link, Element } from "react-scroll";
 import { DemoBorder } from "./lib/AnimatedBorder.jsx/DemoBorder";
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsOpen(false);
+      setIsClosing(false);
+    }, 300); // Match animation time
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
   const links = (
     <>
       <li>
         <Link
+          onClick={() => setIsOpen(false)}
           to="home"
           spy={true}
           activeClass="text-[#ff014f]"
@@ -20,6 +43,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link
+          onClick={() => setIsOpen(false)}
           to="about"
           spy={true}
           activeClass="text-[#ff014f]"
@@ -31,6 +55,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link
+          onClick={() => setIsOpen(false)}
           to="skill"
           spy={true}
           activeClass="text-[#ff014f]"
@@ -42,15 +67,7 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          to="skill"
-          spy={true}
-          activeClass="text-[#ff014f]"
-          smooth={true}
-          duration={500}
-        ></Link>
-      </li>
-      <li>
-        <Link
+          onClick={() => setIsOpen(false)}
           to="projects"
           spy={true}
           activeClass="text-[#ff014f]"
@@ -63,6 +80,7 @@ const Navbar = () => {
 
       <li>
         <Link
+          onClick={() => setIsOpen(false)}
           to="contacts"
           spy={true}
           activeClass="text-[#ff014f]"
@@ -78,16 +96,41 @@ const Navbar = () => {
     <>
       <div className="navbar border-2 rounded-2xl mt-5 bg-base-100 shadow-sm">
         <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <MdMenu />
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          <div>
+            {/* Hamburger Menu Button */}
+            <button
+              className="btn btn-ghost lg:hidden"
+              onClick={() => setIsOpen(true)}
             >
-              {links}
-            </ul>
+              <MdMenu size={24} />
+            </button>
+
+            {/* Full Screen Drawer Overlay */}
+            {isOpen && (
+              <div
+                className="fixed inset-0 z-50  bg-black bg-opacity-50"
+                onClick={handleClose}
+              >
+                {/* Drawer content */}
+                <div
+                  className={`bg-black w-full h-screen p-6 shadow-xl 
+              ${isClosing ? "animate-slide-up" : "animate-slide-down"}`}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {/* Close Button */}
+                  <div className="m-4 text-right mt-6">
+                    <button onClick={handleClose}>
+                      <MdClose size={24} />
+                    </button>
+                  </div>
+
+                  {/* Menu Items */}
+                  <ul className="menu text-center mx-auto text-lg text-white space-y-2">
+                    {links}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="flex items-center ">

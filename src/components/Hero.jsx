@@ -28,16 +28,23 @@ const Hero = () => {
             />
           </div>
           <div className="md:w-1/2 w-full space-y-2 ">
-            <h1 className="text-2xl ">Welcome To My World</h1>
+            <h1 className="text-xl ">
+              Let’s create fast, accessible, and elegant web applications.
+            </h1>
             <h2 className="text-5xl pb-3">
               Hi, I’m <span className="text-[#ff014f]">JOSIM UDDIN</span>
             </h2>
             <TypeingEffect></TypeingEffect>
-            <p className="py-6">
-              I'm a professional Front End Developer with a passion for learning
+            <p className="py-6 text-xl">
+              {/* I'm a professional Front End Developer with a passion for learning
               and solving problems. I love exploring new technologies and making
               the web more accessible. My core skill is JavaScript, and I'm open
-              to any opportunity that matching my skills and interests.
+              to any opportunity that matching my skills and interests. */}
+              I'm a Front-End focused MERN Stack Developer skilled in
+              JavaScript, React, and Tailwind CSS. I also work with Express.js
+              and MongoDB to build full-stack features when needed. I enjoy
+              learning new tools and turning ideas into responsive,
+              user-friendly web applications.
             </p>
             <div className="flex items-center  justify-between gap-4">
               <div>
