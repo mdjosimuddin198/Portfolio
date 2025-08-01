@@ -68,6 +68,18 @@ const Navbar = () => {
       <li>
         <Link
           onClick={() => setIsOpen(false)}
+          to="education"
+          spy={true}
+          activeClass="text-[#ff014f]"
+          smooth={true}
+          duration={500}
+        >
+          EDUCATION
+        </Link>
+      </li>
+      <li>
+        <Link
+          onClick={() => setIsOpen(false)}
           to="projects"
           spy={true}
           activeClass="text-[#ff014f]"

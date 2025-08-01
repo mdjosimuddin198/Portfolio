@@ -15,6 +15,7 @@ import { Element } from "react-scroll";
 import AboutMeSection from "./aboutMe/AboutMeSection";
 import Skills from "./skilll/Skills";
 import Contact from "./contact/Contact";
+import EducationSection from "./education/EducationSection";
 
 const Hero = () => {
   return (
@@ -95,6 +96,7 @@ const Hero = () => {
       </Element>
       <AboutMeSection></AboutMeSection>
       <Skills></Skills>
+      <EducationSection></EducationSection>
       <ProjectDemo></ProjectDemo>
       <WhatIDo></WhatIDo>
       <Contact></Contact>
