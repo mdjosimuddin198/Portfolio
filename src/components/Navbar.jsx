@@ -34,7 +34,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
           to="home"
           spy={true}
-          activeClass="text-[#ff014f]"
+          activeClass="text-[#34D399] font-bold"
           smooth={true}
           duration={500}
         >
@@ -46,7 +46,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
           to="about"
           spy={true}
-          activeClass="text-[#ff014f]"
+          activeClass="text-[#34D399] font-bold"
           smooth={true}
           duration={500}
         >
@@ -58,7 +58,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
           to="skill"
           spy={true}
-          activeClass="text-[#ff014f]"
+          activeClass="text-[#34D399] font-bold"
           smooth={true}
           duration={500}
         >
@@ -70,7 +70,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
           to="education"
           spy={true}
-          activeClass="text-[#ff014f]"
+          activeClass="text-[#34D399] font-bold"
           smooth={true}
           duration={500}
         >
@@ -82,7 +82,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
           to="projects"
           spy={true}
-          activeClass="text-[#ff014f]"
+          activeClass="text-[#34D399] font-bold"
           smooth={true}
           duration={500}
         >
@@ -95,7 +95,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(false)}
           to="contacts"
           spy={true}
-          activeClass="text-[#ff014f]"
+          activeClass="text-[#34D399] font-bold"
           smooth={true}
           duration={500}
         >
@@ -161,7 +161,7 @@ const Navbar = () => {
           {/* <a
             href="https://www.linkedin.com/in/mdjosimuddin198/"
             target="_blank"
-            className="btn text-[#ff014f] "
+            className="btn text-[#34D399] font-bold "
           >
             Hire Me
           </a> */}

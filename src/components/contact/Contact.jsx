@@ -3,11 +3,21 @@ import { FaTwitter, FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
 import { Button } from "../lib/AnimatedBorder.jsx/AnimatedBorder";
 import { Element } from "react-scroll";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const handleSendMsg = (e) => {
+    e.preventDefault();
+    toast.warn("Thanks for reaching out! Currently unavailable.");
+  };
   return (
     <Element name="contacts" className=" rounded-2xl">
-      <p className="text-5xl p-4 text-[#ff014f]">Contact With Me</p>
+      <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#60A5FA] to-[#34D399] bg-clip-text text-transparent mb-6 text-center">
+        Contact With Me
+      </p>
+      <p className="text-xl font-bold  mb-12 text-center text-white">
+        Feel free to reach out — I'm just a message away
+      </p>
       <section className=" text-white py-8 md:flex gap-8  items-center justify-center">
         {/* Left Section - Contact Info */}
         <div className="p-6 rounded-xl w-full md:w-1/3 space-y-4 shadow-lg">
@@ -24,11 +34,11 @@ const Contact = () => {
           </p>
           <p>
             <span className="text-gray-400">Phone: </span>
-            <span className="text-[#ff014f]">+8801725508545</span>
+            <span className="text-[#34D399]">+8801725508545</span>
           </p>
           <p>
             <span className="text-gray-400">Email: </span>
-            <span className="text-[#ff014f]">josimweb0504@gmail.com</span>
+            <span className="text-[#34D399]">josimweb0504@gmail.com</span>
           </p>
           <div>
             <p className="text-gray-400 mb-2">FIND WITH ME</p>
@@ -59,7 +69,10 @@ const Contact = () => {
         </div>
 
         {/* Right Section - Contact Form */}
-        <div className="w-full md:w-2/3 mt-8 md:mt-0 space-y-4">
+        <form
+          onSubmit={handleSendMsg}
+          className="w-full md:w-2/3 mt-8 md:mt-0 space-y-4"
+        >
           <div className="grid md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm text-gray-400 mb-1">
@@ -67,8 +80,9 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#ff014f]"
+                className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#34D399]"
                 placeholder="Enter your name"
+                required
               />
             </div>
             <div>
@@ -76,9 +90,10 @@ const Contact = () => {
                 PHONE NUMBER
               </label>
               <input
-                type="text"
-                className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#ff014f]"
+                type="number"
+                className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#34D399]"
                 placeholder="Enter your phone"
+                required
               />
             </div>
           </div>
@@ -86,16 +101,19 @@ const Contact = () => {
             <label className="block text-sm text-gray-400 mb-1">EMAIL</label>
             <input
               type="email"
-              className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#ff014f]"
+              className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#34D399]"
               placeholder="Enter your email"
+              required
             />
           </div>
+
           <div>
             <label className="block text-sm text-gray-400 mb-1">SUBJECT</label>
             <input
               type="text"
-              className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#ff014f]"
+              className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#34D399]"
               placeholder="Subject"
+              required
             />
           </div>
           <div>
@@ -104,12 +122,19 @@ const Contact = () => {
             </label>
             <textarea
               rows="6"
-              className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#ff014f]"
+              className="w-full bg-[#1a1c22] p-3 rounded-md outline-none focus:ring-2 focus:ring-[#34D399]"
               placeholder="Type your message"
+              required
             ></textarea>
           </div>
-          <Button className="text-[#ff014f]">SEND MESSAGE</Button>
-        </div>
+          <Button className="text-[#34D399] hover:cursor-pointer">
+            <input
+              type="submit"
+              className="hover:cursor-pointer"
+              value={"SEND MESSAGE"}
+            />
+          </Button>
+        </form>
       </section>
     </Element>
   );

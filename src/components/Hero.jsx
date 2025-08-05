@@ -25,7 +25,7 @@ const Hero = () => {
           <div className=" md:w-1/2 flex items-center md:justify-end justify-center w-full">
             <img
               src="/Hero.png"
-              className="md:w-[400px] border-2 border-red-400 p-4   rounded-full shadow-2xl"
+              className="md:w-[400px] border-2  p-4   rounded-full shadow-2xl"
             />
           </div>
           <div className="md:w-1/2 w-full space-y-2 ">
@@ -33,19 +33,24 @@ const Hero = () => {
               Let’s create fast, accessible, and elegant web applications.
             </h1>
             <h2 className="text-5xl pb-3">
-              Hi, I’m <span className="text-[#ff014f]">JOSIM UDDIN</span>
+              Hi, I’m{" "}
+              <span className="font-bold bg-gradient-to-r from-[#60A5FA] to-[#34D399] bg-clip-text text-transparent mb-6 text-center">
+                JOSIM UDDIN
+              </span>
             </h2>
             <TypeingEffect></TypeingEffect>
             <p className="py-6 text-xl">
-              {/* I'm a professional Front End Developer with a passion for learning
-              and solving problems. I love exploring new technologies and making
-              the web more accessible. My core skill is JavaScript, and I'm open
-              to any opportunity that matching my skills and interests. */}
-              I'm a Front-End focused MERN Stack Developer skilled in
+              {/* I'm a Front-End focused MERN Stack Developer skilled in
               JavaScript, React, and Tailwind CSS. I also work with Express.js
               and MongoDB to build full-stack features when needed. I enjoy
               learning new tools and turning ideas into responsive,
-              user-friendly web applications.
+              user-friendly web applications. */}
+              I'm a frontend-focused full-stack developer, specializing in React
+              and modern UI design. My strength lies in building clean,
+              responsive, and user-friendly interfaces using tools like Tailwind
+              CSS and component-driven architecture. I enjoy transforming ideas
+              into polished, production-ready interfaces — while also
+              maintaining full-stack capabilities with the MERN stack.
             </p>
             <div className="flex items-center  justify-between gap-4">
               <div>

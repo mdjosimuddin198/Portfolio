@@ -15,9 +15,9 @@ const EducationCard = ({ item }) => {
   } = item;
 
   return (
-    <div className="bg-[#10172a] border border-[#1f2a3c]  hover:border-red-400  rounded-2xl p-6 w-full md:w-[47%] shadow-md transition- duration-300">
+    <div className=" border-2 rounded-2xl p-6 w-full md:w-[47%] shadow-md transition- duration-300">
       <div className="flex items-center gap-3 mb-2">
-        <FaUserGraduate className={`text-2xl ${iconColor}`} />
+        <FaUserGraduate className={`text-2xl text-[#30e88d]`} />
         <h3 className="text-2xl font-bold text-white">{title}</h3>
       </div>
 
@@ -38,7 +38,7 @@ const EducationCard = ({ item }) => {
         <span className="bg-[#0f2f24] text-[#30e88d] px-3 py-1 rounded-full text-sm font-medium">
           👨‍🎓 GPA: {gpa}
         </span>
-        <span className="bg-[#152741] text-[#3cc0ff] px-3 py-1 rounded-full text-sm font-medium">
+        <span className="bg-[#152741] text-[#30e88d] px-3 py-1 rounded-full text-sm font-medium">
           📘 Subject: {subjectType}
         </span>
       </div>
@@ -47,7 +47,7 @@ const EducationCard = ({ item }) => {
         {subjects.map((sub, idx) => (
           <span
             key={idx}
-            className="bg-[#1c2941] text-blue-300 px-3 py-1 rounded-full text-sm"
+            className="bg-[#1c2941] text-[#30e88d] px-3 py-1 rounded-full text-sm"
           >
             {sub}
           </span>

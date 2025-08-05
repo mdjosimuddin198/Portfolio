@@ -8,7 +8,7 @@ const Footer = () => {
           <p>
             Copyright © {new Date().getFullYear()} - All right reserved by{" "}
             <a
-              className="ml-2 text-[#ff014f]"
+              className="ml-2 text-[#34D399]"
               href="https://github.com/mdjosimuddin198"
             >
               Md Josim Uddin

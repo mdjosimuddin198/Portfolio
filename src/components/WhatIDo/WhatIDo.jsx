@@ -7,6 +7,9 @@ import {
   FaSearch,
   FaPencilRuler,
   FaArrowRight,
+  FaLaptopCode,
+  FaServer,
+  FaPlug,
 } from "react-icons/fa";
 import { Link } from "react-router";
 
@@ -14,47 +17,49 @@ const whatIDoData = [
   {
     title: "Frontend Development",
     description:
-      "Building interactive and dynamic user interfaces using modern technologies.",
-    icon: <FaCode className="text-4xl text-[#ff014f] mb-4" />,
+      "Building responsive and user-friendly interfaces using React, Tailwind CSS, and modern JavaScript.",
+    icon: <FaLaptopCode className="text-4xl text-[#34D399] mb-4" />,
+  },
+  {
+    title: "Backend Development",
+    description:
+      "Creating robust server-side applications and APIs with Node.js, Express.js, and MongoDB.",
+    icon: <FaServer className="text-4xl text-[#34D399] mb-4" />,
+  },
+  {
+    title: "API Integration",
+    description:
+      "Integrating RESTful APIs and third-party services for seamless frontend-backend communication.",
+    icon: <FaPlug className="text-4xl text-[#34D399] mb-4" />,
   },
   {
     title: "Responsive Web Design",
     description:
-      "Creating websites that are fully responsive and look great on all devices.",
-    icon: <FaMobileAlt className="text-4xl text-[#ff014f] mb-4" />,
+      "Ensuring websites look great and function well on all devices through responsive design techniques.",
+    icon: <FaMobileAlt className="text-4xl text-[#34D399] mb-4" />,
   },
   {
-    title: "Clean and Maintainable Code",
+    title: "Code Quality & Maintenance",
     description:
-      "Writing clean, readable, and well-structured code for easy maintenance and scalability.",
-    icon: <FaCheckCircle className="text-4xl text-[#ff014f] mb-4" />,
+      "Writing clean, maintainable, and scalable code for long-term project success.",
+    icon: <FaCheckCircle className="text-4xl text-[#34D399] mb-4" />,
   },
   {
-    title: "Fast Delivery",
+    title: "Deployment & Hosting",
     description:
-      "Ensuring timely delivery of high-quality projects to meet deadlines efficiently.",
-    icon: <FaRocket className="text-4xl text-[#ff014f] mb-4" />,
-  },
-  {
-    title: "SEO Friendly Design",
-    description:
-      "Designing websites optimized for search engines to improve online visibility.",
-    icon: <FaSearch className="text-4xl text-[#ff014f] mb-4" />,
-  },
-  {
-    title: "Pixel Perfect UI",
-    description:
-      "Delivering designs with precise alignment and perfect visual accuracy.",
-    icon: <FaPencilRuler className="text-4xl text-[#ff014f] mb-4" />,
+      "Deploying applications on platforms like Vercel, Netlify, and Render for reliable production hosting.",
+    icon: <FaRocket className="text-4xl text-[#34D399] mb-4" />,
   },
 ];
 
 const WhatIDo = () => {
   return (
     <section className=" my-12">
-      <p className="text-5xl text-[#ff014f]">What I Do</p>
-      <h2 className="text-xl font-bold  mb-12 text-white">
-        Frontend Developer
+      <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#60A5FA] to-[#34D399] bg-clip-text text-transparent mb-6 text-center">
+        What I Do
+      </p>
+      <h2 className="text-xl font-bold  mb-12 text-center text-white">
+        Designing, developing, and delivering quality web experiences
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8">
         {whatIDoData.map((item, index) => (
@@ -62,7 +67,7 @@ const WhatIDo = () => {
             key={index}
             className="relative bg-gray-900 rounded-xl p-6 text-center hover:shadow-lg hover:scale-105 transition duration-300 cursor-default group"
           >
-            <div className="flex justify-center mb-4 text-5xl text-[#ff014f]">
+            <div className="flex justify-center mb-4 text-5xl text-[#34D399]">
               {item.icon}
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">
@@ -71,7 +76,7 @@ const WhatIDo = () => {
             <p className="text-gray-400 mb-6">{item.description}</p>
 
             {/* View Button */}
-            <Link className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full absolute left-1/2 transform -translate-x-1/2 bottom-4">
+            <Link className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#34D399] text-white px-4 py-2 rounded-full absolute left-1/2 transform -translate-x-1/2 bottom-4">
               <FaArrowRight />
             </Link>
           </div>

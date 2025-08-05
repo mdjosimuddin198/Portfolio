@@ -1,12 +1,13 @@
 import { Element } from "react-scroll";
 import EducationCard from "./EducationCard";
+import { motion } from "motion/react";
 
 const EducationSection = () => {
   const educationData = [
     {
       title: "Secondary School Certificate (SSC)",
       institute: "Rokonpur High School",
-      years: "2019–2020",
+      years: "2021–2022",
       description:
         "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
       gpa: "4.64",
@@ -17,7 +18,7 @@ const EducationSection = () => {
     {
       title: "Higher Secondary Certificate (HSC)",
       institute: "Rohanpur Yusuf Ali Govt. College",
-      years: "2021–2022",
+      years: "2023–2024",
       description:
         "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
       gpa: "5.00",
@@ -28,14 +29,28 @@ const EducationSection = () => {
   ];
 
   return (
-    <Element
-      name="education"
-      className="bg-[#0c1120] rounded-2xl py-16 px-4 md:px-20"
-    >
-      <h2 className="text-4xl font-extrabold text-center bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text mb-4">
+    <Element name="education" className=" rounded-2xl py-16 px-4 md:px-20">
+      {/* <motion.h2
+        style={{
+          background: "linear-gradient(270deg, #60A5FA, #34D399, #60A5FA)",
+          backgroundSize: "600% 600%",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+        }}
+        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+        className="text-4xl md:text-5xl font-bold mb-6 text-center"
+      >
+        Educational Journey
+      </motion.h2> */}
+      <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#60A5FA] to-[#34D399] bg-clip-text text-transparent mb-6 text-center">
         Educational Journey
       </h2>
-      <p className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
+      <p className="text-xl font-bold  mb-12 text-center text-white">
         Discover how academic excellence shapes innovative thinking and
         professional growth.
       </p>

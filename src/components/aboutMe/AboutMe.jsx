@@ -6,17 +6,11 @@ const AboutMe = () => {
 
   const codeToCopy = `const josim = {
   name: "Md Josim Uddin",
-  pronouns: "He/Him",
-  role: "Frontend Developer",
-  country: "Bangladesh",
-  skills: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS", "Express.js", "MongoDB", "Firebase"],
-  learning: ["Full Stack Development", "React.js", "Express.js", "MongoDB", "UI/UX Basics"],
-  askMeAbout: ["Frontend Development", "Backend with Express.js", "Database with MongoDB & Firebase"],
   technologies: {
     frontEnd: ["React.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
     backEnd: ["Express.js", "Node.js"],
     databases: ["MongoDB", "Firebase"],
-    tools: ["VS Code", "Figma", "GitHub"],
+    tools: ["VS Code", "Figma", "GitHub" "vercel" , "Netlify"],
   },
   currentFocus: "Mastering Full Stack Web Development with MERN Stack.",
   funFact: "I love solving problems and making websites look beautiful!"
@@ -41,57 +35,32 @@ const AboutMe = () => {
       <pre className="overflow-x-auto whitespace-pre-wrap leading-relaxed">
         <code>
           <span className="text-purple-400">const</span>{" "}
-          <span className="text-pink-400">josim</span> = {"{\n"}
-          {"  "}
-          <span className="text-blue-400">name</span>:{" "}
-          <span className="text-green-400">"Md Josim Uddin"</span>,{"\n  "}
-          <span className="text-blue-400">pronouns</span>:{" "}
-          <span className="text-green-400">"He/Him"</span>,{"\n  "}
-          <span className="text-blue-400">role</span>:{" "}
-          <span className="text-green-400">"Frontend Developer"</span>,{"\n  "}
-          <span className="text-blue-400">country</span>:{" "}
-          <span className="text-green-400">"Bangladesh"</span>,{"\n  "}
-          <span className="text-blue-400">skills</span>: [
-          <span className="text-green-400">
-            "HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS",
-            "Express.js", "MongoDB", "Firebase"
-          </span>
-          ],{"\n  "}
-          <span className="text-blue-400">learning</span>: [
-          <span className="text-green-400">
-            "Full Stack Development", "React.js", "Express.js", "MongoDB",
-            "UI/UX Basics"
-          </span>
-          ],{"\n  "}
-          <span className="text-blue-400">askMeAbout</span>: [
-          <span className="text-green-400">
-            "Frontend Development", "Backend with Express.js", "Database with
-            MongoDB & Firebase"
-          </span>
-          ],{"\n  "}
-          <span className="text-blue-400">technologies</span>: {"{\n    "}
-          <span className="text-blue-400">frontEnd</span>: [
-          <span className="text-green-400">
+          <span className="text-pink-400">Profile</span> = {"{\n"}
+          <span className="">name</span>:{" "}
+          <span className="text-amber-300">"Md Josim Uddin"</span>,{"\n  "}
+          <span className="">technologies</span>: {"{\n    "}
+          <span className="">frontEnd</span>: [
+          <span className="text-amber-300">
             "React.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"
           </span>
           ],{"\n    "}
-          <span className="text-blue-400">backEnd</span>: [
-          <span className="text-green-400">"Express.js", "Node.js"</span>],
+          <span className="">backEnd</span>: [
+          <span className="text-amber-300">"Express.js", "Node.js"</span>],
           {"\n    "}
-          <span className="text-blue-400">databases</span>: [
-          <span className="text-green-400">"MongoDB", "Firebase"</span>],
+          <span className="">databases</span>: [
+          <span className="text-amber-300">"MongoDB", "Firebase"</span>],
           {"\n    "}
-          <span className="text-blue-400">tools</span>: [
-          <span className="text-green-400">"VS Code", "Figma", "GitHub"</span>]
+          <span className="">tools</span>: [
+          <span className="text-amber-300">"VS Code", "Figma", "GitHub"</span>]
           {"\n  "}
           {"},\n  "}
-          <span className="text-blue-400">currentFocus</span>:{" "}
-          <span className="text-green-400">
+          <span className="">currentFocus</span>:{" "}
+          <span className="text-amber-300">
             "Mastering Full Stack Web Development with MERN Stack."
           </span>
           ,{"\n  "}
-          <span className="text-blue-400">funFact</span>:{" "}
-          <span className="text-green-400">
+          <span className="">funFact</span>:{" "}
+          <span className="text-amber-300">
             "I love solving problems and making websites look beautiful!"
           </span>
           {"\n"}

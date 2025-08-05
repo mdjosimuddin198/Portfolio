@@ -46,9 +46,11 @@ const ProjectDemo = () => {
 
   return (
     <Element name="projects" className=" my-12">
-      <p className="text-5xl text-[#ff014f]">My Projects</p>
-      <h2 className="text-xl font-bold  mb-12 text-white">
-        Visit my Projects and Give your feedback{" "}
+      <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#60A5FA] to-[#34D399] bg-clip-text text-transparent mb-6 text-center">
+        My Projects
+      </p>
+      <h2 className="text-xl font-bold text-center  mb-12 text-white">
+        Showcasing real-world applications built using modern web technologies.
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
@@ -70,15 +72,16 @@ const ProjectDemo = () => {
             <p className="text-gray-400 mb-6">{project.description}</p>
 
             {/* View Button */}
-            <div className="flex items-center justify-center gap-4">
+            <div className="grid grid-cols-2 items-center justify-center gap-4">
               {/* Repo Button */}
               <a
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full"
+                className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#34D399] text-white px-4 py-2 rounded-full"
               >
-                <FaGlobe></FaGlobe>
+                {/* <FaGlobe></FaGlobe> */}
+                Live Preview
               </a>
 
               {/* Live Button */}
@@ -86,9 +89,10 @@ const ProjectDemo = () => {
                 href={project.clientLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full"
+                className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#34D399] text-white px-4 py-2 rounded-full"
               >
-                <FaCode></FaCode>
+                {/* <FaCode></FaCode> */}
+                Frontend Repo
               </a>
               {/* Live Button server */}
               {project?.serverLink ? (
@@ -97,9 +101,10 @@ const ProjectDemo = () => {
                     href={project?.serverLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full"
+                    className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#34D399] text-white px-4 py-2 rounded-full"
                   >
-                    <FaServer></FaServer>
+                    {/* <FaServer></FaServer> */}
+                    Backend Repo
                   </a>
                 </>
               ) : undefined}
@@ -111,9 +116,10 @@ const ProjectDemo = () => {
                 // }}
                 // href={`/details/${project._id}`}
                 rel="noopener noreferrer"
-                className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#ff014f] text-white px-4 py-2 rounded-full"
+                className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#34D399] text-white px-4 py-2 rounded-full"
               >
-                <FaArrowRight></FaArrowRight>
+                Explore
+                {/* <FaArrowRight></FaArrowRight> */}
               </button>
             </div>
           </div>
