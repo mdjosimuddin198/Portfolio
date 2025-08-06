@@ -6,6 +6,7 @@ import axios from "axios";
 import { Element } from "react-scroll";
 import { CiViewList } from "react-icons/ci";
 import ModalDetails from "../modalDetails/ModalDetails";
+import { Button } from "../lib/AnimatedBorder.jsx/AnimatedBorder";
 
 const ProjectDemo = () => {
   const [projects, setProjects] = useState([]);
@@ -69,7 +70,9 @@ const ProjectDemo = () => {
             <h3 className="text-xl font-semibold text-white mb-2">
               {project.title}
             </h3>
-            <p className="text-gray-400 mb-6">{project.description}</p>
+            <p className="text-gray-400 h-32 overflow-hidden mb-6">
+              {project.description}
+            </p>
 
             {/* View Button */}
             <div className="grid grid-cols-2 items-center justify-center gap-4">
@@ -124,6 +127,17 @@ const ProjectDemo = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex items-center justify-center my-6">
+        <Button>
+          <a
+            href="https://github.com/mdjosimuddin198"
+            className="text-[#34D399]"
+            target="_blank"
+          >
+            View More On Github
+          </a>
+        </Button>
       </div>
       <ModalDetails project={project}></ModalDetails>
     </Element>
