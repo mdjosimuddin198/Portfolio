@@ -16,6 +16,7 @@ import AboutMeSection from "./aboutMe/AboutMeSection";
 import Skills from "./skilll/Skills";
 import Contact from "./contact/Contact";
 import EducationSection from "./education/EducationSection";
+import TechSphere from "./skilll/TechSphere";
 
 const Hero = () => {
   return (
@@ -100,6 +101,7 @@ const Hero = () => {
         </div>
       </Element>
       <AboutMeSection></AboutMeSection>
+      {/* <TechSphere></TechSphere> */}
       <Skills></Skills>
       <EducationSection></EducationSection>
       <ProjectDemo></ProjectDemo>

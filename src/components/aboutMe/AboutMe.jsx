@@ -41,7 +41,7 @@ const AboutMe = () => {
           <span className="">technologies</span>: {"{\n    "}
           <span className="">frontEnd</span>: [
           <span className="text-amber-300">
-            "React.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"
+            "React.js", "JavaScript" ,"Tailwind CSS", "HTML", "CSS"
           </span>
           ],{"\n    "}
           <span className="">backEnd</span>: [

@@ -39,7 +39,7 @@ const EducationCard = ({ item }) => {
           👨‍🎓 GPA: {gpa}
         </span>
         <span className="bg-[#152741] text-[#30e88d] px-3 py-1 rounded-full text-sm font-medium">
-          📘 Subject: {subjectType}
+          {subjectType}
         </span>
       </div>
 

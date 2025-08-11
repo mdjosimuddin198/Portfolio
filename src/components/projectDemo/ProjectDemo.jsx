@@ -59,18 +59,18 @@ const ProjectDemo = () => {
             key={index}
             className="relative bg-gray-900 rounded-xl p-6 text-center hover:shadow-lg hover:scale-105 transition duration-300 cursor-default group overflow-hidden"
           >
-            <div className="overflow-hidden h-[200px] rounded-lg mb-4">
+            <div className="overflow-hidden h-[180px] rounded-lg mb-4">
               <img
                 src={project.demoImg}
-                alt=""
+                alt={project.title}
                 className=" transform group-hover:translate-y-[-30%] transition-transform duration-[5000ms] ease-linear"
               />
             </div>
 
-            <h3 className="text-xl font-semibold text-white mb-2">
+            <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#60A5FA] to-[#34D399] bg-clip-text text-transparent mb-2 text-center">
               {project.title}
             </h3>
-            <p className="text-gray-400 h-32 overflow-hidden mb-6">
+            <p className="text-gray-400 h-20 overflow-hidden mb-6">
               {project.description}
             </p>
 
@@ -88,17 +88,17 @@ const ProjectDemo = () => {
               </a>
 
               {/* Live Button */}
-              <a
+              {/* <a
                 href={project.clientLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#34D399] text-white px-4 py-2 rounded-full"
               >
-                {/* <FaCode></FaCode> */}
+                <FaCode></FaCode>
                 Frontend Repo
-              </a>
+              </a> */}
               {/* Live Button server */}
-              {project?.serverLink ? (
+              {/* {project?.serverLink ? (
                 <>
                   <a
                     href={project?.serverLink}
@@ -106,11 +106,11 @@ const ProjectDemo = () => {
                     rel="noopener noreferrer"
                     className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#34D399] text-white px-4 py-2 rounded-full"
                   >
-                    {/* <FaServer></FaServer> */}
+                    <FaServer></FaServer>
                     Backend Repo
                   </a>
                 </>
-              ) : undefined}
+              ) : undefined} */}
               <button
                 onClick={() => handleDetails(project._id)}
                 // onClick={() => {
@@ -121,7 +121,7 @@ const ProjectDemo = () => {
                 rel="noopener noreferrer"
                 className="opacity-100 md:opacity-0 hover:cursor-pointer group-hover:opacity-100 translate-y-0 md:translate-y-4 md:group-hover:translate-y-0 transition-all duration-300 bg-[#34D399] text-white px-4 py-2 rounded-full"
               >
-                Explore
+                View More
                 {/* <FaArrowRight></FaArrowRight> */}
               </button>
             </div>

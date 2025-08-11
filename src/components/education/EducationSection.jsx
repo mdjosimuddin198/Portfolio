@@ -22,7 +22,7 @@ const EducationSection = () => {
       description:
         "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
       gpa: "5.00",
-      subjectType: "Arts",
+      subjectType: "Humanities",
       iconColor: "text-green-400",
       subjects: ["Literature", "Sociology", "Economics", "History"],
     },
