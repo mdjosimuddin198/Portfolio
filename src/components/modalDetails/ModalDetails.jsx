@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaGithub, FaGlobe } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
 import { Button } from "../lib/AnimatedBorder.jsx/AnimatedBorder";
 
 const ModalDetails = ({ project }) => {
@@ -21,7 +22,7 @@ const ModalDetails = ({ project }) => {
       <div className="modal-box max-w-3xl bg-gray-900 text-white">
         <form method="dialog">
           <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-            ✕
+            <ImCross />
           </button>
         </form>
 
@@ -54,7 +55,7 @@ const ModalDetails = ({ project }) => {
           {futurePlans}
         </p>
 
-        <div className="flex gap-4 mb-4">
+        <div className="flex gap-4 flex-col md:flex-row items-center justify-center mb-4">
           <a
             href={liveLink}
             target="_blank"
@@ -88,15 +89,15 @@ const ModalDetails = ({ project }) => {
 
         <div>
           <h4 className="text-xl  font-bold bg-gradient-to-r from-[#60A5FA] to-[#34D399] bg-clip-text text-transparent mb-6 ">
-            Tech Stack:
+            Tech Stack
           </h4>
-          <ul className="list-disc  pl-6">
+          <div className="grid grid-cols-2 items-center justify-between gap-4">
             {techStack?.map((tool, index) => (
-              <Button className="text-[#34D399]" key={index}>
+              <Button className="text-[#34D399] " key={index}>
                 {tool}
               </Button>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </dialog>
