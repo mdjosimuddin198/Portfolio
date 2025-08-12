@@ -4,6 +4,7 @@ import { Outlet } from "react-router";
 import Footer from "../components/Footer";
 import ParticleBackground from "../components/ParticleBackground/ParticleBackground";
 import { div } from "motion/react-client";
+import ScrollTop from "../components/scrollToTop/ScrollTop";
 
 const MainLayouts = () => {
   return (
@@ -20,6 +21,7 @@ const MainLayouts = () => {
       <footer className="w-11/12 mx-auto">
         <Footer></Footer>
       </footer>
+      <ScrollTop></ScrollTop>
     </div>
   );
 };

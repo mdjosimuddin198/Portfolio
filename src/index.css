@@ -6,10 +6,6 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-a.active {
-  color: #ff014f;
-}
-
 @layer utilities {
   .animate-slide-down {
     animation: slide-down 0.3s ease-out forwards;
