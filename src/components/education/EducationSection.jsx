@@ -57,7 +57,12 @@ const EducationSection = () => {
 
       <div className="flex flex-col md:flex-row justify-between items-start gap-6">
         {educationData.map((item, index) => (
-          <EducationCard key={index} item={item}></EducationCard>
+          <EducationCard
+            data-aos="fade-up"
+            data-aos-delay={index * 300}
+            key={index}
+            item={item}
+          ></EducationCard>
         ))}
       </div>
     </Element>
